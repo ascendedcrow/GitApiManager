@@ -126,8 +126,8 @@ STATIC_ROOT = "/home/ascendedcrow/GitApiManager/GitAPIManager"
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    "/home/ascendedcrow/GitApiManager/GitAPIManager/static"
+    #os.path.join(BASE_DIR, 'static'),
+    "/home/ascendedcrow/GitApiManager/GitAPIManager/static/"
 )
 
 #STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
