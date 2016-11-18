@@ -1,0 +1,7 @@
+D:\Work\Temp\DjangoTest\GitAPIManager\GitAPIManager\bin\Microsoft.PythonTools.WebRole.dll
+D:\Work\Temp\DjangoTest\GitAPIManager\GitAPIManager\bin\AzureSetup.cfg
+D:\Work\Temp\DjangoTest\GitAPIManager\GitAPIManager\bin\Microsoft.PythonTools.AzureSetup.exe
+D:\Work\Temp\DjangoTest\GitAPIManager\GitAPIManager\bin\Microsoft.PythonTools.AzureSetup.exe.config
+D:\Work\Temp\DjangoTest\GitAPIManager\GitAPIManager\bin\wfastcgi.py
+D:\Work\Temp\DjangoTest\GitAPIManager\GitAPIManager\obj\Release\web.config
+D:\Work\Temp\DjangoTest\GitAPIManager\GitAPIManager\obj\Release\web.debug.config

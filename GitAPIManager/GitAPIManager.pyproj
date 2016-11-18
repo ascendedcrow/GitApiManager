@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>GitAPIManager</Name>
+    <RootNamespace>GitAPIManager</RootNamespace>
+    <NameOfLastUsedPublishProfile>GitHubIntegrationAssignment - Web Deploy</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>17426581-83f5-49f8-8484-c626291d24df</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\ExternalLibs\github3\docs\conf.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\client.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\compat.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\errors.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\json\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\result\base.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\result\link.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\result\normal.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\result\smart.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\result\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\third_libs\link_header.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\third_libs\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\core\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\exceptions.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\github.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\base.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\events\networks.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\events\orgs.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\events\repos.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\events\users.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\events\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\gists\comments.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\gists\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\git_data\blobs.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\git_data\commits.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\git_data\references.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\git_data\tags.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\git_data\trees.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\git_data\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\issues\comments.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\issues\events.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\issues\labels.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\issues\milestones.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\issues\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\orgs\members.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\orgs\teams.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\orgs\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\pull_requests\comments.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\pull_requests\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\repos\collaborators.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\repos\commits.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\repos\downloads.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\repos\forks.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\repos\hooks.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\repos\keys.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\repos\watchers.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\repos\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\users\emails.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\users\followers.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\users\keys.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\users\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\requests\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\base.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\events.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\gists.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\git_data.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\issues.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\orgs.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\pull_requests.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\repos.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\users.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\resources\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\base.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\events\networks.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\events\orgs.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\events\repos.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\events\users.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\events\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\gists\comments.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\gists\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\git_data\blobs.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\git_data\commits.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\git_data\references.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\git_data\tags.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\git_data\trees.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\git_data\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\issues\comments.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\issues\events.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\issues\labels.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\issues\milestones.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\issues\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\orgs\members.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\orgs\teams.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\orgs\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\pull_requests\comments.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\pull_requests\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\repos\collaborators.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\repos\commits.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\repos\downloads.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\repos\forks.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\repos\hooks.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\repos\keys.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\repos\watchers.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\repos\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\users\emails.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\users\followers.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\users\keys.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\users\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\services\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\core\test_client.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\core\test_json.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\core\test_result.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\core\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\requests\test_core.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\requests\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\resources\test_core.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\resources\test_issues.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\resources\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\test_core.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\test_events.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\test_gists.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\test_git_data.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\test_issues.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\test_orgs.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\test_pull_requests.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\test_repos.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\test_users.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\services\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\utils\base.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\utils\core.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\utils\requests.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\utils\resources.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\utils\services.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\utils\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\tests\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\pygithub3\__init__.py" />
+    <Compile Include="app\ExternalLibs\github3\setup.py" />
+    <Compile Include="app\forms.py" />
+    <Compile Include="GitAPIManager\GitApiFunctions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="GitAPIManager\__init__.py" />
+    <Compile Include="GitAPIManager\settings.py" />
+    <Compile Include="GitAPIManager\urls.py" />
+    <Compile Include="GitAPIManager\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\ExternalLibs\github3\" />
+    <Folder Include="app\ExternalLibs\github3\docs\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\core\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\core\json\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\core\result\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\core\third_libs\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\requests\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\requests\events\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\requests\gists\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\requests\git_data\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\requests\issues\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\requests\orgs\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\requests\pull_requests\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\requests\repos\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\requests\users\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\resources\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\services\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\services\events\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\services\gists\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\services\git_data\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\services\issues\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\services\orgs\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\services\pull_requests\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\services\repos\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\services\users\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\tests\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\tests\core\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\tests\requests\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\tests\resources\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\tests\services\" />
+    <Folder Include="app\ExternalLibs\github3\pygithub3\tests\utils\" />
+    <Folder Include="app\ExternalLibs\github3\requirements\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\app\" />
+    <Folder Include="app\static\app\content\" />
+    <Folder Include="app\static\app\fonts\" />
+    <Folder Include="app\static\app\scripts\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="app\ExternalLibs\" />
+    <Folder Include="GitAPIManager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\ExternalLibs\github3\.gitignore" />
+    <Content Include="app\ExternalLibs\github3\.travis.yml" />
+    <Content Include="app\ExternalLibs\github3\AUTHORS.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\events.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\gists.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\github.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\git_data.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\index.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\installation.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\issues.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\Makefile" />
+    <Content Include="app\ExternalLibs\github3\docs\orgs.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\pull_requests.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\repos.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\resources.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\result.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\services.rst" />
+    <Content Include="app\ExternalLibs\github3\docs\users.rst" />
+    <Content Include="app\ExternalLibs\github3\LICENSE" />
+    <Content Include="app\ExternalLibs\github3\Makefile" />
+    <Content Include="app\ExternalLibs\github3\MANIFEST.in" />
+    <Content Include="app\ExternalLibs\github3\README.rst" />
+    <Content Include="app\ExternalLibs\github3\requirements\base.txt" />
+    <Content Include="app\ExternalLibs\github3\requirements\dev.txt" />
+    <Content Include="app\templates\app\createissue.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="app\static\app\content\bootstrap.css" />
+    <Content Include="app\static\app\content\bootstrap.min.css" />
+    <Content Include="app\static\app\content\site.css" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\app\scripts\bootstrap.js" />
+    <Content Include="app\static\app\scripts\bootstrap.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.min.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="app\static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="app\static\app\scripts\respond.js" />
+    <Content Include="app\static\app\scripts\respond.min.js" />
+    <Content Include="app\static\app\scripts\_references.js" />
+    <Content Include="app\templates\app\issues.html" />
+    <Content Include="app\templates\app\index.html" />
+    <Content Include="app\templates\app\layout.html" />
+    <Content Include="app\templates\app\login.html" />
+    <Content Include="app\templates\app\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.mht">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

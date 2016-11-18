@@ -1,0 +1,84 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Client Name
+            </th>
+            <th>
+               Action item/Request
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                GH number
+            </th>
+            <th>
+                Priority
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Assigned To
+            </th>
+            <th>
+                Comments
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for issue in issues %}
+        <tr>
+            <td>
+                {{issue.client}}
+            </td>
+            <td>
+                {{issue.data.title}}
+            </td>
+
+            <td>
+                {{issue.data.body}}
+            </td>
+
+            <td>
+                {{issue.data.number}}
+            </td>
+
+            <td>
+                {{issue.priority}}
+            </td>
+
+            <td>
+                {{issue.category}}
+            </td>
+            <td>
+                {{issue.data.assignee}}
+            </td>
+            <td>
+                {{issue.issue_comments}}
+            </td>
+            <td>
+                 {{issue.data.state}}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<ul class="pagination">
+    {% for page in pages %}
+        <li><a href="?page={{page}}">{{page}}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

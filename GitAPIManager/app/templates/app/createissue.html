@@ -1,0 +1,69 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section id="createForm">
+            <form action="." method="post" class="form-horizontal">
+                {% csrf_token %}
+                <h4>Create a new issue.</h4>
+                <hr />
+                <div class="form-group">
+                    <label for="id_client" class="col-md-2 control-label">Client</label>
+                    <div class="col-md-10">
+                        {{ form.client }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="id_title" class="col-md-2 control-label">Title</label>
+                    <div class="col-md-10">
+                        {{ form.title }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="id_description" class="col-md-2 control-label">Description</label>
+                    <div class="col-md-10">
+                        {{ form.description }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="id_priority" class="col-md-2 control-label">Priority</label>
+                    <div class="col-md-10">
+                        {{ form.priority }}
+                    </div>
+                </div>
+               <div class="form-group">
+                    <label for="id_category" class="col-md-2 control-label">Category</label>
+                    <div class="col-md-10">
+                        {{ form.category }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="id_assignto" class="col-md-2 control-label">Assign To</label>
+                    <div class="col-md-10">
+                        {{ form.assignto }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="hidden" name="next" value="/" />
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+    {% load staticfiles %}
+<script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+
+{% endblock %}
