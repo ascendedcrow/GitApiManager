@@ -1,5 +1,6 @@
 from github import *
 
+
 def CheckAndLogout(request):
     try:
         del request.session['username'] 
@@ -35,6 +36,10 @@ def CheckAndLogin(request):
         return False,None
     CheckAndLogout(request)
     return False,None
+
+def GitLoginOAuth (UserName,Password):
+    from app.models import git_login
+    auth = GitLoginOAuth(UserName,Password)
 
 def GitLogin (UserName,Password):
     from app.models import git_login

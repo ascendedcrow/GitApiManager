@@ -2,7 +2,7 @@
 Definition of urls for GitAPIManager.
 """
 from datetime import datetime
-from django.conf.urls import url
+from django.conf.urls import url,include
 import django.contrib.auth.views
 
 import app.forms
@@ -10,6 +10,7 @@ import app.views
 
 
 urlpatterns = [
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^$', app.views.home, name='home'),
     url(r'^issues/$', app.views.issues, name='issues'),
     url(r'^login/$',app.views.login,name='login'),
