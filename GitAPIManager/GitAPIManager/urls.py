@@ -10,6 +10,7 @@ import app.views
 
 
 urlpatterns = [
+
     url(r'^accounts/', include('allauth.urls')),
     url(r'^$', app.views.home, name='home'),
     url(r'^issues/$', app.views.issues, name='issues'),

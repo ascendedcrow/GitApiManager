@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0e85a1da-3fca-4e49-ace5-ea193ef02e7a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -128,18 +128,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_ROOT = "/home/ascendedcrow/GitApiManager/GitAPIManager"
-STATIC_URL = "/static/"
+#STATIC_ROOT = "/home/ascendedcrow/GitApiManager/GitAPIManager"
 
-STATICFILES_DIRS = (
-    #os.path.join(BASE_DIR, 'static'),
-    "/home/ascendedcrow/GitApiManager/GitAPIManager/app/static/",
-)
 
-#STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+#STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+#    #"/home/ascendedcrow/GitApiManager/GitAPIManager/app/static/",
+#)
+
+STATIC_URL = '/static/'
+
+STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 
 AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
