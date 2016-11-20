@@ -14,8 +14,6 @@ def home(request):
     from GitAPIManager.GitApiFunctions import GetGithubToken
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
-    if request.user.is_authenticated():
-        GetGithubToken(request.user.username)
 
     return render(
         request,

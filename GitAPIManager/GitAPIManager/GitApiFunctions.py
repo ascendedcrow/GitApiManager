@@ -1,9 +1,9 @@
 from github import *
 
-def GetGithubToken(username):
+def GetGithubToken(userid):
     from allauth.socialaccount.models import SocialToken
-    aaccess_token = SocialToken.objects.filter(account__user=username, account__provider='github')
-    return
+    aaccess_token = SocialToken.objects.filter(account__user=userid, account__provider='github')
+    return aaccess_token
 
 def CheckAndLogout(request):
     try:
@@ -16,6 +16,21 @@ def CheckAndLogin(request):
     from app.models import git_login
     gh = None
     try:
+        #####OAUTH CHECK#####
+        if request.user.is_authenticated():
+            access_token = GetGithubToken(request.user.id)
+            if (access_token):
+                for token in access_token:
+                    gh = Github(token.token)
+                    if gh:
+                        return True,gh
+                    else:
+                        return False,gh
+            else:
+                return False,gh
+        else:
+            return False,gh
+
         #Check if logged in
         if not request.session.get('loggedin'):
             CheckAndLogout(request)
