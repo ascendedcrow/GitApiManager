@@ -1,5 +1,9 @@
 from github import *
 
+def GetGithubToken(username):
+    from allauth.socialaccount.models import SocialToken
+    aaccess_token = SocialToken.objects.filter(account__user=username, account__provider='github')
+    return
 
 def CheckAndLogout(request):
     try:
@@ -36,10 +40,7 @@ def CheckAndLogin(request):
         return False,None
     CheckAndLogout(request)
     return False,None
-
-def GitLoginOAuth (UserName,Password):
-    from app.models import git_login
-    auth = GitLoginOAuth(UserName,Password)
+ 
 
 def GitLogin (UserName,Password):
     from app.models import git_login

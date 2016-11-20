@@ -5,6 +5,7 @@
     <Name>GitAPIManager</Name>
     <RootNamespace>GitAPIManager</RootNamespace>
     <NameOfLastUsedPublishProfile>GitHubIntegrationAssignment - Web Deploy</NameOfLastUsedPublishProfile>
+    <WebBrowserPort>59989</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>

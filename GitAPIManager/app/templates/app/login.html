@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-md-8">
         <section id="loginForm">
-            <form action="." method="post" class="form-horizontal">
+            <form action="." method="post" class="form-horizontal disable">
                 {% csrf_token %}
                 <h4>Use a local account to log in.</h4>
                 <hr />
@@ -38,6 +38,8 @@
         <section id="socialLoginForm"></section>
     </div>
 </div>
+{% load socialaccount %}
+<a href="{% provider_login_url "github" %}">Github</a>
 
 {% endblock %}
 
@@ -46,5 +48,8 @@
 
     {% load staticfiles %}
 <script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+<script type="text/javascript">("input").prop("disabled", true); //Disable</script>
 
 {% endblock %}
+
+
