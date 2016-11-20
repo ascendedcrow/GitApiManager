@@ -243,8 +243,8 @@
     <Content Include="app\ExternalLibs\github3\requirements\base.txt" />
     <Content Include="app\ExternalLibs\github3\requirements\dev.txt" />
     <Content Include="app\templates\app\createissue.html" />
-    <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
+    <Content Include="requirements.txt" />
     <Content Include="app\static\app\content\bootstrap.css" />
     <Content Include="app\static\app\content\bootstrap.min.css" />
     <Content Include="app\static\app\content\site.css" />

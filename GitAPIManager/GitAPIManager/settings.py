@@ -149,8 +149,6 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-GITHUB_CLIENT_ID               = '899004a4b1fcf5d0f9bf'
-GITHUB_CLIENT_SECRET           = '3dce2dbd64e903e1810c8ed0ee41ba57e77fb20f'
 
 SITE_ID = 2
 
