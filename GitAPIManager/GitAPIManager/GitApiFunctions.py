@@ -79,7 +79,11 @@ def GitIssues(repo,gh,page):
     ## Pagenation
     ##check item to start
     itemInPage = 10
-    startItem = ((page-1) * itemInPage) 
+    try:
+        startItem = ((int(page)-1) * itemInPage) 
+    except ValueError as verr:
+        startItem = 0
+
     c = 1;
     AllIssues = repoObject.get_issues()
     for issue in  AllIssues:
